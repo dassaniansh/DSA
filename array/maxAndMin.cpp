@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 /**
     Time: O(n)
     Space: O(1)
@@ -10,6 +7,9 @@ using namespace std;
     if this number is larger than the largest number, if it is we set the current
     largest to this number.
 */
+
+#include<bits/stdc++.h>
+using namespace std;
 
 pair<int,int> minMax(vector<int> arr){
     int min = arr[0];

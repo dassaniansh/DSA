@@ -21,8 +21,6 @@ vector<int> reverseArray(vector<int> arr){
 int main(){
     vector<int> arr = {1, 4, 9, 10, 15};
     arr = reverseArray(arr);
-    for(int i = 0; i<arr.size(); i++){
-        cout<<arr[i]<<' ';
-    }
+    for(auto it: arr) cout<<it<<' ';
     return 0;
 }
