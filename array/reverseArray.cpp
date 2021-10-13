@@ -1,24 +1,27 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-int main(){
-
-    /**
+/**
     Time: O(n)
     Space: O(1)
     We start with the first and the last element
     of the array and then move towards the center whle swapping them.
-    */
+*/
 
-    int arr[] = {1, 4, 9, 10, 15};
-    int n = sizeof(arr)/sizeof(arr[0]);
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> reverseArray(vector<int> arr){
     int temp;
-    for(int i = 0; i < n/2; i++){
+    for(int i = 0; i < arr.size()/2; i++){
         temp = arr[i];
-        arr[i] = arr[n-i-1];
-        arr[n-i-1] = temp;
+        arr[i] = arr[arr.size()-i-1];
+        arr[arr.size()-i-1] = temp;
     }
-    for(int i = 0; i<n; i++){
+    return arr;
+}
+
+int main(){
+    vector<int> arr = {1, 4, 9, 10, 15};
+    arr = reverseArray(arr);
+    for(int i = 0; i<arr.size(); i++){
         cout<<arr[i]<<' ';
     }
     return 0;
